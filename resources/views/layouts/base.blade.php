@@ -13,6 +13,8 @@
             <meta name="description" content="">
         @show
 
+        <link rel="author" href="humans.txt">
+
         @section('prefetch')
             {{-- DNS prefetches --}}
         @show

@@ -1,0 +1,16 @@
+# nobox.com/
+# Better marketing is social at the core!
+
+# DEV TEAM
+
+    Antonio Rodríguez -- CTO -- @antoniwan
+    Alberto Estrada -- Web Developer -- @cyberkiko
+    Jonathan Torres -- Web Developer -- @torres_jonathan
+    Waldemar Figueroa -- Web Developer -- @waldemar_fm
+
+# TECHNOLOGY COLOPHON
+
+    HTML5, CSS, ES6, SVG
+    jQuery, Modernizr, Normalize.css
+    PHP, Laravel, MySQL
+    Nginx Server Configs, Pagespeed, Memcached
