@@ -2,7 +2,11 @@
 
 @section('prefetch')
     <link rel="dns-prefetch" href="https://code.jquery.com">
-@show
+@stop
+
+@section('stylesheets')
+    <link rel="stylesheet" href="{{ elixir('css/styles.css') }}">
+@stop
 
 @section('body-open')
     <body data-route="{{ Route::currentRouteName() }}">
