@@ -1,4 +1,5 @@
 var elixir = require('laravel-elixir');
+require('./elixir-extensions/imagemin');
 
 // Set SASS options
 config.css.sass.pluginOptions = {
@@ -19,6 +20,9 @@ elixir(function(mix) {
     mix
         // Compile main SASS stylesheet
         .sass('styles.scss')
+
+        // Optimize project images
+        .imagemin()
 
         // Cache-busting like a boss
         .version([
