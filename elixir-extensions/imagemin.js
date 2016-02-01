@@ -8,6 +8,16 @@ var Elixir = require('laravel-elixir'),
     config = Elixir.config
 ;
 
+/*
+ |----------------------------------------------------------------
+ | ImageMin
+ |----------------------------------------------------------------
+ |
+ | This task passes all project images through imagemin optimizer.
+ |
+ | @see https://github.com/sindresorhus/gulp-imagemin
+ */
+
 Elixir.extend('imagemin', function(src, output, options) {
     config.imagemin = {
         folder: 'img',
