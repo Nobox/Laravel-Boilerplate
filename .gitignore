@@ -11,3 +11,6 @@ Homestead.json
 /public/css
 /public/img
 /public/svg
+_tools.sprite.scss
+sprite.png
+sprite@2x.png
