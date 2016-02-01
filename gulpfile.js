@@ -1,5 +1,6 @@
 var elixir = require('laravel-elixir');
 require('./elixir-extensions/imagemin');
+require('./elixir-extensions/svg-sprite');
 
 // Set SASS options
 config.css.sass.pluginOptions = {
@@ -24,8 +25,12 @@ elixir(function(mix) {
         // Optimize project images
         .imagemin()
 
+        // Create optimized SVG spritesheet
+        .svgSprite()
+
         // Cache-busting like a boss
         .version([
             'css/styles.css',
+            'svg/sprite.svg',
         ])
 });
