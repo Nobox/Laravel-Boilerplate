@@ -9,6 +9,7 @@ Homestead.json
 # Compiled assets
 /public/build
 /public/css
+/public/js
 /public/img
 /public/svg
 _tools.sprite.scss
