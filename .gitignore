@@ -1,17 +1,4 @@
 /vendor
 /node_modules
-/public/bower_components
-Homestead.yaml
-Homestead.json
 .env
 .DS_Store
-
-# Compiled assets
-/public/build
-/public/css
-/public/js
-/public/img
-/public/svg
-_tools.sprite.scss
-sprite.png
-sprite@2x.png
