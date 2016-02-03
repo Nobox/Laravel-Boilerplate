@@ -24,6 +24,9 @@ elixir(function(mix) {
         // Compile main SASS stylesheet
         .sass('styles.scss')
 
+        // Pass JS code through Browserify and create bundle
+        .browserify('entry.js', config.get('public.js.outputFolder') + '/bundle.js')
+
         // Optimize project images
         .imagemin()
 
@@ -41,6 +44,7 @@ elixir(function(mix) {
 
         // Cache-busting like a boss
         .version([
+            'js/bundle.js',
             'css/styles.css',
             'svg/sprite.svg',
             'js/vendor/modernizr-custom.js'

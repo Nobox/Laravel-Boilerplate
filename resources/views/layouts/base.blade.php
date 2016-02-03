@@ -38,5 +38,9 @@
         @section('scripts-plugins')
             {{-- Plugin scripts --}}
         @show
+
+        @section('scripts-site')
+            {{-- Site scripts --}}
+        @show
     </body>
 </html>
