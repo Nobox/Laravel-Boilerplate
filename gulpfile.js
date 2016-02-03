@@ -24,12 +24,6 @@ config.js.browserify.watchify.options.poll = true;
 // Mix it
 elixir(function(mix) {
     mix
-        // Compile main SASS stylesheet
-        .sass('styles.scss')
-
-        // Pass JS code through Browserify and create bundle
-        .browserify('entry.js', config.get('public.js.outputFolder') + '/bundle.js')
-
         // Optimize project images
         .imagemin()
 
@@ -38,6 +32,12 @@ elixir(function(mix) {
 
         // Create optimized SVG spritesheet
         .spritesmith()
+
+        // Compile main SASS stylesheet
+        .sass('styles.scss')
+
+        // Pass JS code through Browserify and create bundle
+        .browserify('entry.js', config.get('public.js.outputFolder') + '/bundle.js')
 
         // Custom modernizr build
         .modernizr(null, null, {
