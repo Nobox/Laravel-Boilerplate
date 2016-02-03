@@ -160,6 +160,7 @@ return [
          * Third Party Packages...
          */
         Barryvdh\Debugbar\ServiceProvider::class,
+        GrahamCampbell\HTMLMin\HTMLMinServiceProvider::class,
     ],
 
     /*
