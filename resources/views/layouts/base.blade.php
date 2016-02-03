@@ -27,6 +27,10 @@
         @section('stylesheets')
             {{-- Stylesheets --}}
         @show
+
+        @section('scripts-head')
+            {{-- JS absolutely required in the <head> --}}
+        @show
     </head>
 
     @section('body-open')

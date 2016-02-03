@@ -12,6 +12,13 @@
     <body data-route="{{ Route::currentRouteName() }}">
 @stop
 
+@section('scripts-head')
+    <script>
+      // Picture element HTML5 shiv
+      document.createElement('picture');
+    </script>
+@stop
+
 @section('body')
     @yield('view-content')
 @stop
