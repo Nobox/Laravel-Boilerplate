@@ -18,6 +18,9 @@ config.css.autoprefix.options = {
     cascade: false
 };
 
+// Enable watchify polling for our NFS-mounted VMs.
+config.js.browserify.watchify.options.poll = true;
+
 // Mix it
 elixir(function(mix) {
     mix
