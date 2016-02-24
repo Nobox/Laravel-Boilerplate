@@ -20,6 +20,8 @@
     "svg4everybody": "^2.0.3"
   },
   "devDependencies": {
+    "eslint": "^2.2.0",
+    "eslint-config-airbnb": "^6.0.2",
     "gulp": "^3.8.8"
   },
   "private": true
