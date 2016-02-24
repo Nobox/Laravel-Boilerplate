@@ -1,4 +1,5 @@
 import $ from 'jquery';
+import ga from 'google-analytics';
 
 /**
  * Send event to Google
@@ -9,13 +10,26 @@ import $ from 'jquery';
  * @return {undefined}
  */
 function gaEvent(category, action, label, value = null) {
+  if (category !== null && label !== null) {
+    ga('send', 'event', category, action, label, value);
+  } else {
+    console.warn(`Category and label are required for GA event bound on: ${this}`);
+  }
+}
 
-    if (category != null && label != null) {
-        ga('send', 'event', category, action, label, value);
-    } else {
-        console.warn('Category and label are required for GA event bound on: ' + this);
-    }
+/**
+ * Helper to get and use DOM data for ga call
+ * @param  {String} type Type of event action, click or hover
+ * @return {undefined}
+ */
+function gaHelper(type) {
+  const $this = $(this);
+  const category = $this.data('ga-category');
+  const action = $this.data('ga-action');
+  const label = $this.data('ga-label');
+  const value = $this.data('ga-value');
 
+  gaEvent(category, action || type, label, value);
 }
 
 /**
@@ -24,31 +38,13 @@ function gaEvent(category, action, label, value = null) {
  * @return {undefined}
  */
 function analyticsHelpers() {
-    var $document = $(document);
+  const $document = $(document);
 
-    // Click helper
-    $document.on('click.analytics', '.js-ga-event', function (e) {
-        var $this = $(this),
-            category = $this.data('ga-category'),
-            action = $this.data('ga-action'),
-            label = $this.data('ga-label'),
-            value = $this.data('ga-value')
-        ;
+  // Click helper
+  $document.on('click.analytics', '.js-ga-event', gaHelper('click'));
 
-        gaEvent(category, action || 'click', label, value);
-    });
-
-    // Hover helper
-    $document.on('mouseover.analytics', '.js-ga-hover-event', function (e) {
-        var $this = $(this),
-            category = $this.data('ga-category'),
-            action = $this.data('ga-action'),
-            label = $this.data('ga-label'),
-            value = $this.data('ga-value')
-        ;
-
-        gaEvent('send', 'event', category, action || 'hover', label, value);
-    });
+  // Hover helper
+  $document.on('mouseover.analytics', '.js-ga-hover-event', gaHelper('hover'));
 }
 
 // Export

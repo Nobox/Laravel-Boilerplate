@@ -1,3 +1,4 @@
+import $ from 'jquery';
 import analyticsHelpers from './lib/analytics-helpers';
 
 /**
@@ -7,11 +8,11 @@ import initIndex from './views/index';
 
 /**
  * Associate view modules with their
- * respective named routes
+ * respective Laravel named routes
  * @type {Object}
  */
-var routes = {
-    'index': initIndex,
+const routes = {
+  index: initIndex,
 };
 
 /**
@@ -19,16 +20,16 @@ var routes = {
  * @return {undefined}
  */
 function initSite() {
-    var currentRoute = $('body').data('route');
+  const currentRoute = $('body').data('route');
 
-    // Initialize view module using current route
-    if (routes[currentRoute]) {
-        var view = routes[currentRoute];
-        view();
-    }
+  // Initialize view module using current route
+  if (routes[currentRoute]) {
+    const view = routes[currentRoute];
+    view();
+  }
 
-    // Bind analytic helper events
-    analyticsHelpers();
+  // Bind analytic helper events
+  analyticsHelpers();
 }
 
 export default initSite;

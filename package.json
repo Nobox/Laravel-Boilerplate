@@ -5,7 +5,9 @@
     ]
   },
   "browserify-shim": {
-    "jquery": "global:jQuery"
+    "jquery": "global:jQuery",
+    "modernizr": "global:Modernizr",
+    "google-analytics": "global:ga"
   },
   "dependencies": {
     "browserify-shim": "^3.8.12",
