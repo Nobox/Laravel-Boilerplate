@@ -11,6 +11,7 @@ config.css.sass.pluginOptions = {
     './node_modules',
     `${config.publicPath}/bower_components`,
   ],
+  outputStyle: 'expanded',
 };
 
 // Add IE9 support to autoprefixer options.
