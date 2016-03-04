@@ -18,7 +18,7 @@
     "gulp-imagemin": "^2.4.0",
     "gulp-svg-sprite": "^1.2.19",
     "gulp.spritesmith": "^6.1.0",
-    "laravel-elixir": "^4.0.0",
+    "laravel-elixir": "^5.0.0",
     "laravel-elixir-modernizr": "^1.1.0",
     "svg4everybody": "^2.0.3"
   },
