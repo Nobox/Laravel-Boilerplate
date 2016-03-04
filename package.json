@@ -10,6 +10,7 @@
     "google-analytics": "global:ga"
   },
   "dependencies": {
+    "gulp": "^3.8.8",
     "browserify-shim": "^3.8.12",
     "fastclick": "^1.0.6",
     "fg-loadjs": "^0.2.3",
@@ -24,7 +25,6 @@
   "devDependencies": {
     "eslint": "^2.2.0",
     "eslint-config-airbnb": "^6.0.2",
-    "gulp": "^3.8.8",
     "sass-lint": "^1.5.0"
   },
   "private": true
