@@ -31,12 +31,7 @@
     <![endif]-->
 
     {{-- Modernizr --}}
-    @if (file_exists(public_path(elixir('js/vendor/modernizr-custom.js'))))
-        <script src="{{ elixir('js/vendor/modernizr-custom.js') }}"></script>
-    @else
-        <script src="{{ asset('bower_components/modernizr/modernizr.js') }}"></script>
-        <script>console.warn('Warning: Using the bloated development version of Modernizr. Use a custom build.');</script>
-    @endif
+    <script src="{{ elixir('js/vendor/modernizr-custom.js') }}"></script>
 
     {{-- jQuery --}}
     <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
