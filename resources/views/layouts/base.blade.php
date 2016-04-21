@@ -64,5 +64,9 @@
         @section('scripts-site')
             {{-- Site scripts --}}
         @show
+
+        @section('scripts-media')
+            {{-- Media tracking scripts, loaded last --}}
+        @show
     </body>
 </html>
