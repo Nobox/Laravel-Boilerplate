@@ -13,14 +13,19 @@ svg4everybody();
 
 // HTML5 input placeholder polyfill
 if (! Modernizr.placeholder) {
-  loadJS('bower_components/jquery-placeholder/jquery.placeholder.min.js', () => {
+  loadJS('/bower_components/jquery-placeholder/jquery.placeholder.min.js', () => {
     $('input, textarea').placeholder();
   });
 }
 
 // HTML5 <picture> and srcset polyfill
+// and download LazySizes
 if (! Modernizr.srcset || ! Modernizr.picture) {
-  loadJS('bower_components/picturefill/dist/picturefill.min.js');
+  loadJS('/bower_components/picturefill/dist/picturefill.min.js', () => {
+    loadJS('/bower_components/lazysizes/lazysizes.min.js');
+  });
+} else {
+  loadJS('/bower_components/lazysizes/lazysizes.min.js');
 }
 
 // Start site
