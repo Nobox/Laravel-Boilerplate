@@ -2,7 +2,7 @@
   "name": "nobox-boilerplate",
   "private": true,
   "dependencies": {
-    "jquery": "2.2.0",
+    "jquery": "2.2.3",
     "jquery-placeholder": "^2.3.1",
     "picturefill": "^3.0.1",
     "matchMedia": "matchmedia#^0.3.0"
