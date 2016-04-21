@@ -26,8 +26,8 @@
 @section('scripts-plugins')
     {{-- matchMedia Polyfill --}}
     <!--[if lte IE 9]>
-    <script src="bower_components/matchMedia/matchMedia.js"></script>
-    <script src="bower_components/matchMedia/matchMedia.addListener.js"></script>
+    <script src="/bower_components/matchMedia/matchMedia.js"></script>
+    <script src="/bower_components/matchMedia/matchMedia.addListener.js"></script>
     <![endif]-->
 
     {{-- Modernizr --}}
