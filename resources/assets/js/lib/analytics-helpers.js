@@ -1,5 +1,4 @@
 import $ from 'jquery';
-import ga from 'google-analytics';
 
 /**
  * Send event to Google
@@ -11,7 +10,7 @@ import ga from 'google-analytics';
  */
 function gaEvent(category, action, label, value = null) {
   if (category !== null && label !== null) {
-    ga('send', 'event', category, action, label, value);
+    window.ga('send', 'event', category, action, label, value);
   } else {
     console.warn(`Category and label are required for GA event bound on: ${this}`);
   }
@@ -22,14 +21,14 @@ function gaEvent(category, action, label, value = null) {
  * @param  {String} type Type of event action, click or hover
  * @return {undefined}
  */
-function gaHelper(type) {
+function gaHelper(e) {
   const $this = $(this);
   const category = $this.data('ga-category');
   const action = $this.data('ga-action');
   const label = $this.data('ga-label');
   const value = $this.data('ga-value');
 
-  gaEvent(category, action || type, label, value);
+  gaEvent(category, action || e.type, label, value);
 }
 
 /**
@@ -41,10 +40,10 @@ function analyticsHelpers() {
   const $document = $(document);
 
   // Click helper
-  $document.on('click.analytics', '.js-ga-event', gaHelper('click'));
+  $document.on('click.analytics', '.js-ga-event', gaHelper);
 
   // Hover helper
-  $document.on('mouseover.analytics', '.js-ga-hover-event', gaHelper('hover'));
+  $document.on('mouseover.analytics', '.js-ga-hover-event', gaHelper);
 }
 
 // Export

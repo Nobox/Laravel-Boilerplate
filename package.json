@@ -6,8 +6,7 @@
   },
   "browserify-shim": {
     "jquery": "global:jQuery",
-    "modernizr": "global:Modernizr",
-    "google-analytics": "global:ga"
+    "modernizr": "global:Modernizr"
   },
   "dependencies": {
     "gulp": "^3.8.8",
