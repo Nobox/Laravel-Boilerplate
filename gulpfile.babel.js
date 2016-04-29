@@ -1,3 +1,5 @@
+'use strict';
+
 const elixir = require('laravel-elixir');
 const config = elixir.config;
 require('laravel-elixir-modernizr');
