@@ -14,11 +14,11 @@
     @endif
 
     @section('title')
-      <title>Nobox Boilerplate</title>
+      <title>{{ config('meta.app.name') }} | {{ config('meta.app.client') }}</title>
     @show
 
     @section('meta')
-      <meta name="description" content="">
+      <meta name="description" content="{{ config('meta.app.description') }}">
     @show
 
     <link rel="author" href="humans.txt">
