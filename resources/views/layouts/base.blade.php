@@ -5,6 +5,9 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    {{-- Disable tap highlight on IE --}}
+    <meta name="msapplication-tap-highlight" content="no">
+
     {{-- Make sure our staging/dev sites aren't crawled by search engines --}}
     @if ('production' != app()->environment())
       <meta name="robots" content="noindex">
