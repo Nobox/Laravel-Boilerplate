@@ -21,7 +21,8 @@
       <meta name="description" content="{{ config('meta.app.description') }}">
     @show
 
-    <link rel="author" href="humans.txt">
+    {{-- See http://humanstxt.org/ --}}
+    <link type="text/plain" rel="author" href="/humans.txt">
 
     @section('prefetch')
       {{-- DNS prefetches --}}
